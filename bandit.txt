@@ -1,0 +1,62 @@
+bandit1 - ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+bandit2 - 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+bandit3 - MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+bandit4 - 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+bandit5 - 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+bandit6 - HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+bandit7 - morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+bandit8 - dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+bandit9 - 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+bandit10 - FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+bandit11 - dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+bandit12 - 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+bandit13 - FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+bandit14 - (ssh bandit.labs.overthewire.org -l bandit14 -p 2220 -i sshkey.private) #all this command should be run in bandit13 to get into bandit14
+	   MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+bandit15 - 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+bandit16 - openssl s_client -connect 127.0.0.1:30001
+           #pasting current user pswd 
+           kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+bandit17 - bandit16@bandit:~$ ncat --ssl 127.0.0.1 31790
+	   bandit16@bandit:/tmp/leotest$ nano pass.key
+           bandit16@bandit:/tmp/leotest$ ssh bandit17@bandit -p 2220 -i pass.key
+bandit18 - bandit17@bandit:~$ ls
+	      passwords.new  passwords.old
+	   bandit17@bandit:~$ cmp passwords.new passwords.old
+              passwords.new passwords.old differ: byte 1354, line 42
+           bandit17@bandit:~$ diff passwords.new passwords.old
+		42c42
+		< x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO #bandit18 password
+		---
+		> ktfgBvpMzWKR5ENj26IbLGSblgUG9CzB
+	   bandit17@bandit:~$ cat passwords.new | grep x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+              x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+           bandit17@bandit:~$ cat passwords.old | grep x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+           bandit17@bandit:~$ cat passwords.old | grep ktfgBvpMzWKR5ENj26IbLGSblgUG9CzB
+              ktfgBvpMzWKR5ENj26IbLGSblgUG9CzB
+           bandit17@bandit:~$ cat passwords.new | grep ktfgBvpMzWKR5ENj26IbLGSblgUG9CzB
+           bandit17@bandit:~$ logout
+              Connection to bandit closed.
+           bandit16@bandit:/tmp/leotest$ logout
+              Connection to bandit.labs.overthewire.org closed.
+           leo420@LAPTOP-3VL3N9SM:~$ ssh bandit.labs.overthewire.org -l bandit18 -p 2220
+bandit19 -
+          leo420@LAPTOP-3VL3N9SM:~$ ssh bandit.labs.overthewire.org -l bandit18 -p2220 cat readme
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+            bandit18@bandit.labs.overthewire.org's password:#pasting bandit18 password
+            ---->cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8 #password for bandit19
+
+bandit20-
+          bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+          -------->0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO #password for bandit20
+normal > compress > compress hexdump -> normal
